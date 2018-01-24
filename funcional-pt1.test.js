@@ -96,3 +96,8 @@ test('Criar função que dobre o peso dos patos que possuam a cor branca', t => 
   t.is(resultado[2].peso, 40)
   t.is(resultado[3].peso, 18)
 })
+
+test.only('Criar funçao que dados os patos, retorne o peso médio deles', t => {
+  const resultado =  0
+  t.is(resultado, 12)
+})
