@@ -1,5 +1,6 @@
 const test = require('ava')
-const todasCores = ['preto', 'branco', 'cinza', 'amarelo']
+const {testHelpers} = require('./lib')
+
 const patos = [
   {
     nome: 'Mauricio',
@@ -66,18 +67,14 @@ test('Implementar função filtrarPatosPelaCor que dados uma cor e patos retorne
   t.is(resultado[1].nome, 'Feijão')    
 })
 
-test('Implementar função que receba os patos e transforme o campo cores em um array com todas as cores', t => {
+test('Implementar função que receba os patos e transforme seu campo cores em um array com todas as cores do pato', t => {
   function transformarCores(patos) {
-    return []
+    return []  
   }
 
   const resultado = transformarCores(patos)
   t.true(resultado.length > 0)
-  resultado.forEach(pato => {
-    t.true(Array.isArray(pato.cores))
-    t.true(pato.cores.length > 0)
-    pato.cores.forEach(cor => t.true(todasCores.includes(cor)))
-  })
+  resultado.forEach(testHelpers.verificaCoresPato(t))
   //exemplo resultado esperado {nome: 'mauricio', cores: ['branco', 'preto']}
 })
 

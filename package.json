@@ -5,7 +5,7 @@
   "main": "indexjs",
   "scripts": {
     "test": "ava ./**/*.js",
-    "test:watch": "ava ./**/*.js --watch"
+    "test:watch": "ava ./**/*.test.js --watch"
   },
   "keywords": [],
   "author": "",
