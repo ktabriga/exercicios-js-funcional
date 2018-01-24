@@ -24,12 +24,12 @@ const patos = [
   {
     nome: 'Joaquim',
     cores: 'cinza,preto',
-    peso: 20
+    peso: 11
   },
   {
     nome: 'Feijão',
     cores: 'cinza,preto,branco,amarelo',
-    peso: 20
+    peso: 9
   }    
 ]
 
@@ -67,15 +67,26 @@ test('Implementar função filtrarPatosPelaCor que dados uma cor e patos retorne
 })
 
 test('Implementar função que receba os patos e transforme o campo cores em um array com todas as cores', t => {
-  function normalizarPatos(patos) {
+  function transformarCores(patos) {
     return []
   }
 
-  const resultado = normalizarPatos(patos)
+  const resultado = transformarCores(patos)
   t.true(resultado.length > 0)
   resultado.forEach(pato => {
     t.true(Array.isArray(pato.cores))
     t.true(pato.cores.length > 0)
     pato.cores.forEach(cor => t.true(todasCores.includes(cor)))
   })
+  //exemplo resultado esperado {nome: 'mauricio', cores: ['branco', 'preto']}
+})
+
+test('Criar função que dobre o peso dos patos que possuam a cor branca', t => {
+
+  const resultado =  []
+  t.truthy(resultado[0])
+  t.is(resultado[0].peso, 28)
+  t.is(resultado[1].peso, 14)
+  t.is(resultado[2].peso, 40)
+  t.is(resultado[3].peso, 18)
 })
