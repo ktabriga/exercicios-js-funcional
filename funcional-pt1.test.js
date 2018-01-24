@@ -67,7 +67,16 @@ test('Implementar função filtrarPatosPelaCor que dados uma cor e patos retorne
   t.is(resultado[1].nome, 'Feijão')    
 })
 
-test('Implementar função que receba os patos e transforme seu campo cores em um array com todas as cores do pato', t => {
+test('Criar novo array com o dobro dos valores anteriores', t => {
+  const valores = [2, 5, 8, 20]
+  const resultado = valores
+  t.is(resultado[0], 4)
+  t.is(resultado[1], 10)
+  t.is(resultado[2], 16)
+  t.is(resultado[3], 40)
+})
+
+test('Implementar função transformarCores que receba os patos e transforme seu campo cores em um array com todas as cores do pato', t => {
   function transformarCores(patos) {
     return []  
   }
