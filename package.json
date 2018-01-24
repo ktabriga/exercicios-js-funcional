@@ -1,0 +1,16 @@
+{
+  "name": "exercicios-js-funcional",
+  "version": "1.0.0",
+  "description": "",
+  "main": "indexjs",
+  "scripts": {
+    "test": "ava ./**/*.js",
+    "test:watch": "ava ./**/*.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ava": "^0.24.0"
+  }
+}
