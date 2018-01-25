@@ -6,7 +6,8 @@
   "scripts": {
     "test": "ava ./**/*.test.js",
     "test:funcional": "ava ./**/funcional.test.js --watch",
-    "test:assincrono": "ava ./**/assincrono.test.js --watch"
+    "test:assincrono": "ava ./**/assincrono.test.js --watch",
+    "start:patos-api": "node ./patos-api"
   },
   "keywords": [],
   "author": "",
