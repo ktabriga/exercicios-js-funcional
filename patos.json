@@ -1,0 +1,8 @@
+[
+    {"nome":"Mauricio","cores":"preto,branco","peso":14},
+    {"nome":"Francisco","cores":"preto","peso":10},
+    {"nome":"Doralice","cores":"branco","peso":7},
+    {"nome":"Alfredo","cores":"branco,amarelo","peso":20},
+    {"nome":"Joaquim","cores":"cinza,preto","peso":11},
+    {"nome":"Feijão","cores":"cinza,preto,branco,amarelo","peso":9}
+]

@@ -1,38 +1,7 @@
 const test = require('ava')
 const {testHelpers} = require('./lib')
+const patos = require('./patos')
 
-const patos = [
-  {
-    nome: 'Mauricio',
-    cores: 'preto,branco',
-    peso: 14
-  },
-  {
-    nome: 'Francisco',
-    cores: 'preto',
-    peso: 10
-  },
-  {
-    nome: 'Doralice',
-    cores: 'branco',
-    peso: 7
-  },
-  {
-    nome: 'Alfredo',
-    cores: 'branco,amarelo',
-    peso: 20
-  },
-  {
-    nome: 'Joaquim',
-    cores: 'cinza,preto',
-    peso: 11
-  },
-  {
-    nome: 'Feijão',
-    cores: 'cinza,preto,branco,amarelo',
-    peso: 9
-  }    
-]
 
 test('Criar função que receba um nome e retorne uma string com uma saudação', t => {
 
@@ -97,7 +66,7 @@ test('Criar função que dobre o peso dos patos que possuam a cor branca', t => 
   t.is(resultado[3].peso, 18)
 })
 
-test.only('Criar funçao que dados os patos, retorne o peso médio deles', t => {
+test('Criar funçao que dados os patos, retorne o peso médio deles', t => {
   const resultado =  0
   t.is(resultado, 12)
 })
