@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>06-Styles</title>
+  </head>
+  <body>
+    <script src="https://fb.me/react-15.1.0.js"></script>
+    <script src="https://fb.me/react-dom-15.1.0.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+    <div id='root'></div>
+
+    <style>
+      .box {
+        border: solid black 1px;
+      }
+      .box-small {
+        height: 60px;
+        width:  60px;
+      }
+
+      .box-medium {
+        height: 80px;
+        width:  80px;
+      }
+
+      .box-large {
+        height: 120px;
+        width:  120px;
+      }
+
+    </style>
+    <script type="text/babel">  
+      const rootElement = document.getElementById('root')
+      const element = (
+        <div className='box box-small'>
+          <div>box</div>
+        </div>
+      )
+      ReactDOM.render(
+        element, 
+        rootElement
+      )
+            
+    </script>
+  </body>
+</html>
+ 

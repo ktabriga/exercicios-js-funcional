@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>01-react</title>
+  </head>
+  <body>
+    <script src="https://fb.me/react-15.1.0.js"></script>
+    <script src="https://fb.me/react-dom-15.1.0.js"></script>
+
+    <div id='root'></div>
+
+    <script>
+      const rootElement = document.getElementById('root')
+      const element = document.createElement('div')
+      element.textContent = 'Olá mundo'
+      rootElement.appendChild(element)
+      //const element = React.createElement('div', {
+        //className: 'container',
+        //children: ['ola mundo', 'teste']
+      //})
+      //ReactDOM.render(element, rootElement)
+    </script>
+  </body>
+</html>
