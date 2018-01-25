@@ -9,7 +9,7 @@ const patosApi = create({
 })
 
 test('Buscar usuário na api do git', t => {
-  const getUser = user => 
+  const getUser = user =>
     gitApi.get(`/users/${user}`)
 
   return getUser('ktabriga').then(response => {
@@ -29,7 +29,7 @@ test('Implemente função que busque uma lista de patos', t => {
 })
 
 
-test.only('Implemente função que crie um pato na api', t => {
+test('Implemente função que crie um pato na api', t => {
   const criarPato = pato => {}
 
   return criarPato({
@@ -42,7 +42,7 @@ test.only('Implemente função que crie um pato na api', t => {
   })
 })
 
-test.only('Implemente função que busque um pato pelo id na api, altere seu nome e então atualize na api', t => {
+test('Implemente função que busque um pato pelo id na api, altere seu nome e então atualize na api', t => {
   const atualizarPato = (id, nome) => {}
   return atualizarPato(1, 'NovoNome')
     .then(response => {
