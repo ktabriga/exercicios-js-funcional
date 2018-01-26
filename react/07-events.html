@@ -34,16 +34,35 @@
     </style>
     <script type="text/babel">  
       const rootElement = document.getElementById('root')
-      const element = (
-        <div className='box box-small'>
-          <div>box</div>
-        </div>
-      )
-      ReactDOM.render(
-        element, 
-        rootElement
-      )
+      let state = {}
+
+      function setState(newState) {
+        state = {...state, ...newState}
+        renderApplication()
+      }
+
+      function App() {
+        
+        return (
+          <div>
+            <h2>Aconteceram 0 Eventos</h2>
+            <button>Clique</button>
+            <br/>
+            <h2>Você digitou: alterar</h2>
+            <input type='text' />
+          </div>
+        )
+      }
+
+      function renderApplication() {
+        ReactDOM.render(
+          <App />, 
+          rootElement
+        )  
+      }      
             
+      renderApplication()
+      setState({eventos: 0})
     </script>
   </body>
 </html>

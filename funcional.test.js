@@ -3,29 +3,30 @@ const {testHelpers} = require('./lib')
 const patos = require('./patos')
 
 
-test('Criar função que receba um nome e retorne uma string com uma saudação', t => {
+test('1 - Criar função que receba um nome e retorne uma string com uma saudação', t => {
 
   const resultado = saudacao('Mauricio')
 
   t.is(resultado, 'Hello to Javascript World Mauricio')	
 })
 
-test('Implementar função produto que receba um número x e retorne oura função que receba um número y e então retorne o produto dos valores ', t => {
-  const x = 25
-  const y = 5
+test.only('2 - Implementar função "valorPassagem" que receba o valor da passagem e retorne uma outra função "totalGrupo" que quando invocada passando a quantidade de pessoas, retorne o valor total de passagem para o grupo.', t => {
+  const valor = 30
 
-  function produto(x) {
+  function valorPassagem(valor) {
     return null
   }
 
-  const produto5 = produto(x)
-  const resultado = produto5(y)
+  const totalGrupo = valorPassagem(valor)
+  const total8 = totalGrupo(8)
+  const total15 = totalGrupo(15)
 
-  t.is(resultado, 125)   
+  t.is(total8, 240)   
+  t.is(total15, 450)   
 })
 
 
-test('Implementar função filtrarPatosPelaCor que dados uma cor e patos retorne um novo array com patos filtrados pela cor passada', t => {
+test('3 - Implementar função filtrarPatosPelaCor que dados uma cor e patos retorne um novo array com patos filtrados pela cor passada', t => {
   function filtrarPatosPelaCor(patos, cor) {
     return []
   }
@@ -36,7 +37,7 @@ test('Implementar função filtrarPatosPelaCor que dados uma cor e patos retorne
   t.is(resultado[1].nome, 'Feijão')    
 })
 
-test('Criar novo array com o dobro dos valores anteriores', t => {
+test('4 - Criar novo array com o dobro dos valores anteriores', t => {
   const valores = [2, 5, 8, 20]
   const resultado = valores
   t.is(resultado[0], 4)
@@ -45,7 +46,7 @@ test('Criar novo array com o dobro dos valores anteriores', t => {
   t.is(resultado[3], 40)
 })
 
-test('Implementar função transformarCores que receba os patos e transforme seu campo cores em um array com todas as cores do pato', t => {
+test('5 - Implementar função transformarCores que receba os patos e transforme seu campo cores em um array com todas as cores do pato', t => {
   function transformarCores(patos) {
     return []  
   }
@@ -56,7 +57,7 @@ test('Implementar função transformarCores que receba os patos e transforme seu
   //exemplo resultado esperado {nome: 'mauricio', cores: ['branco', 'preto']}
 })
 
-test('Criar função que dobre o peso dos patos que possuam a cor branca', t => {
+test('6 - Criar função que dobre o peso dos patos que possuam a cor branca', t => {
 
   const resultado =  []
   t.truthy(resultado[0])
@@ -66,7 +67,7 @@ test('Criar função que dobre o peso dos patos que possuam a cor branca', t => 
   t.is(resultado[3].peso, 18)
 })
 
-test('Criar funçao que dados os patos, retorne o peso médio deles', t => {
+test('7 - Criar funçao que dados os patos, retorne o peso médio deles', t => {
   const resultado =  0
   t.is(resultado, 12)
 })
