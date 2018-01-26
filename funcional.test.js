@@ -26,7 +26,7 @@ test.only('2 - Implementar função "valorPassagem" que receba o valor da passag
 })
 
 
-test('3 - Implementar função filtrarPatosPelaCor que dados uma cor e patos retorne um novo array com patos filtrados pela cor passada', t => {
+test('3 - Implementar função "filtrarPatosPelaCor" que receba uma cor e patos e retorne um array com apenas os patos que tem a cor amarela no seu atributo cores', t => {
   function filtrarPatosPelaCor(patos, cor) {
     return []
   }
@@ -37,7 +37,7 @@ test('3 - Implementar função filtrarPatosPelaCor que dados uma cor e patos ret
   t.is(resultado[1].nome, 'Feijão')    
 })
 
-test('4 - Criar novo array com o dobro dos valores anteriores', t => {
+test('4 - Utilizar a função map para transformar os valores do array "valores" aplicando uma função dobro', t => {
   const valores = [2, 5, 8, 20]
   const resultado = valores
   t.is(resultado[0], 4)
@@ -46,7 +46,7 @@ test('4 - Criar novo array com o dobro dos valores anteriores', t => {
   t.is(resultado[3], 40)
 })
 
-test('5 - Implementar função transformarCores que receba os patos e transforme seu campo cores em um array com todas as cores do pato', t => {
+test('5 - Implementar função transformarCores que receba os patos e transforme seu campo cores em um array com todas as cores do pato. Usar map', t => {
   function transformarCores(patos) {
     return []  
   }
@@ -57,17 +57,16 @@ test('5 - Implementar função transformarCores que receba os patos e transforme
   //exemplo resultado esperado {nome: 'mauricio', cores: ['branco', 'preto']}
 })
 
-test('6 - Criar função que dobre o peso dos patos que possuam a cor branca', t => {
-
-  const resultado =  []
-  t.truthy(resultado[0])
-  t.is(resultado[0].peso, 28)
-  t.is(resultado[1].peso, 14)
-  t.is(resultado[2].peso, 40)
-  t.is(resultado[3].peso, 18)
+test('6 - Criar função "alimentaCisne" que escolha apenas os patos de cor "branca" e dobre seu peso. Usar filter e map', t => {
+  const cisneis =  []
+  t.truthy(cisneis[0])
+  t.is(cisneis[0].peso, 28)
+  t.is(cisneis[1].peso, 14)
+  t.is(cisneis[2].peso, 40)
+  t.is(cisneis[3].peso, 18)
 })
 
-test('7 - Criar funçao que dados os patos, retorne o peso médio deles', t => {
+test('7 - Criar funçao que dados os patos, retorne o peso médio deles. Usar reduce', t => {
   const resultado =  0
   t.is(resultado, 12)
 })
