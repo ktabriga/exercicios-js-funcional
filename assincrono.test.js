@@ -18,6 +18,7 @@ test('1 - Buscar usuário na api do git', t => {
   })
 })
 
+//Sabendo que o caminho da api é "/patos" e o método que é utilizado para acessar é o "get"  
 test('2 - Implemente função que busque uma lista de patos', t => {
   const getPatos = () => {}
 
@@ -28,7 +29,7 @@ test('2 - Implemente função que busque uma lista de patos', t => {
   })
 })
 
-
+//Sabendo que o método que é utilizado para criar um registro é o "post" 
 test('3 - Implemente função que crie um pato na api', t => {
   const criarPato = pato => {}
 
@@ -42,6 +43,7 @@ test('3 - Implemente função que crie um pato na api', t => {
   })
 })
 
+//Sabendo que o método que é utilizado para alterar um registro é o "put"
 test('4 - Implemente função que busque um pato pelo id na api, altere seu nome e então atualize na api', t => {
   const atualizarPato = (id, nome) => {}
   return atualizarPato(1, 'NovoNome')
